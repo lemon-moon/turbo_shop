@@ -1,7 +1,6 @@
 package io.mars.turbo_shop.entitiy;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,24 +12,23 @@ import java.util.List;
 @Setter
 @Getter
 @NoArgsConstructor
-@AllArgsConstructor
-public class Order {
+public class Invoice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @OneToMany(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "order_id", referencedColumnName = "id", foreignKey = @ForeignKey(name = "order_item_parent_fk"))
-    private List<OrderItem> orderItems;
+    @JoinColumn(name = "invoice_id", referencedColumnName = "id", foreignKey = @ForeignKey(name = "invoice_item_parent_fk"))
+    private List<InvoiceItem> orderItems;
 
     @Enumerated(EnumType.STRING)
-    private OrderStatus orderStatus;
+    private InvoiceStatus invoiceStatus;
 
-    @Column(name = "is_order_paid")
+    @Column(name = "is_invoice_paid")
     private Boolean paid;
 
-    @Column(name = "order_cost")
+    @Column(name = "invoice_cost")
     private Double cost;
 
     @Column(name = "purchase_date")

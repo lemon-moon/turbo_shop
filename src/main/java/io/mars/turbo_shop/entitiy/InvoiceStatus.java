@@ -1,6 +1,6 @@
 package io.mars.turbo_shop.entitiy;
 
-public enum OrderStatus {
+public enum InvoiceStatus {
     INITIALIZATION,
     GETTING_REDY_FOR_SHIPMENT,
     GETTING_TO_LOCAL_STOCKROOM,

@@ -11,24 +11,24 @@ import java.time.LocalDateTime;
 @Setter
 @Getter
 @NoArgsConstructor
-public class OrderDiscount {
+public class InvoiceDiscount {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "order_discount_percent")
+    @Column(name = "invoice_discount_percent")
     private Integer percent;
 
-    @Column(name = "order_discount_amount")
+    @Column(name = "invoice_discount_amount")
     private Long amount;
 
-    @Column(name = "is_order_discount_used")
+    @Column(name = "is_invoice_discount_used")
     private Boolean used;
 
-    @Column(name = "order_discount_start_date")
+    @Column(name = "invoice_discount_start_date")
     private LocalDateTime from;
 
-    @Column(name = "order_discount_end_date")
+    @Column(name = "invoice_discount_end_date")
     private LocalDateTime till;
 }

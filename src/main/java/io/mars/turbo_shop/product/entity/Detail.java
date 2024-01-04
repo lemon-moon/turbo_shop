@@ -1,4 +1,4 @@
-package io.mars.turbo_shop.entitiy;
+package io.mars.turbo_shop.product.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package io.mars.turbo_shop.entitiy;
+package io.mars.turbo_shop.product.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

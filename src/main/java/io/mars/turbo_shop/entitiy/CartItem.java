@@ -1,5 +1,6 @@
 package io.mars.turbo_shop.entitiy;
 
+import io.mars.turbo_shop.product.entity.ProductDetail;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
